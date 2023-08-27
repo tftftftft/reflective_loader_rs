@@ -1,14 +1,26 @@
-# reflective_loader_rs
+### reflective_loader_rs
 Library that allows running PE files in memory
 
+##Installation
+- Clone the Repository
+```PowerShell
+git clone https://github.com/tftftftft/reflective_loader_rs.git
+```
+- Add to dependencies ( Cargo.toml )
+use runpe::runpe::reflective_loader;
+```Rust
+[dependencies]
+rspe_lib = { path = "../rspe_lib" }
+```
 
-LITCRYPT for strings in code, don't forget to set LITCRYPT_ENCRYPT_KEY var. 
+
+#LITCRYPT for strings in code, don't forget to set LITCRYPT_ENCRYPT_KEY var. 
 [Repo](https://github.com/anvie/litcrypt.rs)
 
 ```PowerShell
 $env:LITCRYPT_ENCRYPT_KEY="myverysuperdupermegaultrasecretkey"
 ```
-Sample code demonstrating how to use the library is commented within the lib.rs file.
+#Sample code demonstrating how to use the library is commented within the lib.rs file.
 
 ```rust
 #[link_section = ".rsrc"]
@@ -42,5 +54,5 @@ static DATA: &[u8] = include_bytes!("..\\payload_debug_xor_aes.exe");
 }
 ```
 
-Environment Support
+#Environment Support
 - This library supports a no_std environment.
