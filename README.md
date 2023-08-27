@@ -14,7 +14,7 @@ rspe_lib = { path = "../rspe_lib" }
 ```
 
 
-LITCRYPT for strings in code, don't forget to set LITCRYPT_ENCRYPT_KEY var. 
+Don't forget to set LITCRYPT_ENCRYPT_KEY var. 
 [Repo](https://github.com/anvie/litcrypt.rs)
 
 ```PowerShell
