@@ -1,0 +1,37 @@
+[package]
+name = "rspe_lib"
+version = "1.4.3"
+edition = "2021"
+authors = ["Graydon Hoare", "Fnu Lnu <no-reply@rust-lang.org>"]
+description = "A short description of my package"
+documentation = "https://docs.rs/bitflags"
+homepage = "https://serde.rs/"
+license = "MIT OR Apache-2.0"
+# build = "build.rs"
+
+[build-dependencies]
+winres = "0.1"
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+
+[profile.release]
+opt-level = "z"     # Optimize for size = "z"
+lto = true          # Enable Link Time Optimization
+codegen-units = 1   # Reduce number of codegen units to increase optimizations.
+panic = "abort"     # Abort on panic
+strip = true        # Automatically strip symbols from the binary.
+debug = false       # Deletes comments from compiled executable
+
+[dependencies]
+# libaes = "0.6.5"
+# libc_alloc = "1.0.4"
+# syscalls = { path = "../syscalls-rs/syscalls",  features = ["_INDIRECT_"] }
+litcrypt = "0.3"
+rust_syscalls = {path = "..//rust_syscalls", features = ["_INDIRECT_"]}
+windows-sys = {version = "0.48.0", features = ["Win32_System_Threading"]}
+# winres = "0.1.12"
+
+
+# [dependencies]
+# pdf_font = { path = "C:\\Users\\rust\\Desktop\\code\\crypt_pe" }
+
