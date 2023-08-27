@@ -2,9 +2,12 @@
 Library that allows running PE files in memory
 
 
-Using LITCRYPT for strings in code, don't forget to set LITCRYPT_ENCRYPT_KEY var. [Repo](https://github.com/anvie/litcrypt.rs)
-$ export LITCRYPT_ENCRYPT_KEY="myverysuperdupermegaultrasecretkey"
+LITCRYPT for strings in code, don't forget to set LITCRYPT_ENCRYPT_KEY var. 
+[Repo](https://github.com/anvie/litcrypt.rs)
 
+```PowerShell
+$env:LITCRYPT_ENCRYPT_KEY="myverysuperdupermegaultrasecretkey"
+```
 Sample code demonstrating how to use the library is commented within the lib.rs file.
 
 ```rust
@@ -40,5 +43,4 @@ static DATA: &[u8] = include_bytes!("..\\payload_debug_xor_aes.exe");
 ```
 
 Environment Support
-
-    This library supports a no_std environment.
+- This library supports a no_std environment.
