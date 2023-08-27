@@ -13,7 +13,6 @@ extern crate alloc;
 // use obfus::tricks::make_sleep;
 // use runpe::runpe::reflective_loader;
 
-// use utils::deobfuscate_string;
 
 // // #[global_allocator]
 // // static ALLOCATOR: LibcAlloc = LibcAlloc;
@@ -29,7 +28,7 @@ extern crate alloc;
 //     // make_sleep(5).expect("sleep failed");
 //     // println!("{}", now.elapsed().as_secs());
 
-//     let key = deobfuscate_string(&obfuscate_string!("kalimera freunde")); //String
+//     let key = "16 BYTES KEY"; //String
 
 //     // Convert to bytes and create key_array in one step.
 //     let key_array: [u8; 16] = key
